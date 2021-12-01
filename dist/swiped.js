@@ -56,7 +56,7 @@
                 }
 
                 return false;
-            });
+            }, {passive: false});
 
         });
     }
@@ -156,7 +156,7 @@
             node.removeEventListener(transitionEvent, trEnd);
         }
 
-        node.addEventListener(transitionEvent, trEnd);
+        node.addEventListener(transitionEvent, trEnd, {passive: false});
     };
 
     /**
